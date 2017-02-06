@@ -1,6 +1,6 @@
 import { db } from '../db'
-import { externalizeIdOf, internalize } from '../../src/mongo'
-import log from '../../src/log'
+import { externalizeIdOf, internalize } from 'u5-api-base/dist/mongo'
+import log from 'u5-api-base/dist/log'
 
 export default {
 

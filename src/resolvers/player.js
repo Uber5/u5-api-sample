@@ -1,6 +1,6 @@
 import { db } from '../db'
-import { externalizeIdOf } from '../../src/mongo'
-import log from '../../src/log'
+import { externalizeIdOf } from 'u5-api-base/dist/mongo'
+import log from 'u5-api-base/dist/log'
 
 const teamMembershipsOf = player => {
   return db.TeamMemberships()
