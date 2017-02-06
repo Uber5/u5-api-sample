@@ -1,0 +1,4 @@
+input PlayerInput {
+  level: Level
+  firstName: String!
+}

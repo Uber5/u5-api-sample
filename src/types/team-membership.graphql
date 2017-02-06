@@ -1,0 +1,11 @@
+# Represents a team membership: The referenced player belongs to the referenced team.
+type TeamMembership {
+  id: ID!
+  # foreignKey(Player)
+  playerId: ID!
+  player: Player
+
+  # foreignKey(Team)
+  teamId: ID!
+  team: Team
+}

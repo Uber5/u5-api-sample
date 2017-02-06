@@ -1,0 +1,29 @@
+{
+  "name": "u5-api-sample",
+  "version": "1.0.0",
+  "description": "Sample API built using u5-api-base",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Uber5/u5-api-sample.git"
+  },
+  "keywords": [
+    "u5",
+    "api",
+    "graphql",
+    "sample",
+    "express"
+  ],
+  "author": "Chris Oloff <chris@uber5.com> (http://about.uber5.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Uber5/u5-api-sample/issues"
+  },
+  "homepage": "https://github.com/Uber5/u5-api-sample#readme",
+  "dependencies": {
+    "u5-api-base": "0.0.1"
+  }
+}

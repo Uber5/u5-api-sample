@@ -1,0 +1,9 @@
+# Represents a player, with some details.
+type Player {
+  id: ID!
+  level: Level
+  firstName: String!
+  archived: Boolean
+  teamMemberships: [TeamMembership]
+  teams: [Team]
+}
