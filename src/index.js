@@ -1,9 +1,7 @@
 import { join } from 'path'
 import express from 'express'
 import { makeExecutableSchema, addResolveFunctionsToSchema } from 'graphql-tools'
-import { configureEndpoint, getLiteralTypes, getResolvers } from 'u5-api-base'
-import DateTime from 'u5-api-base/dist/types/date-time'
-import log from 'u5-api-base/dist/log'
+import { log, types, configureEndpoint, getLiteralTypes, getResolvers } from 'u5-api-base'
 import { mongo, ensureIndexes } from './db'
 
 const app = express()
@@ -63,7 +61,7 @@ const schema = makeExecutableSchema({
 })
 
 addResolveFunctionsToSchema(schema, {
-  DateTime
+  DateTime: types.DateTime
 })
 
 const endpoint = configureEndpoint({

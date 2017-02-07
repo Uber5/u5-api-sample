@@ -1,7 +1,5 @@
-import { db } from '../db'
-import { externalizeIdOf, internalize } from 'u5-api-base/dist/mongo'
-import { failIfNotFound } from 'u5-api-base/dist/utils'
-import log from 'u5-api-base/dist/log'
+import { db, externalizeIdOf, internalize, failIfNotFound } from '../db'
+import { log } from 'u5-api-base'
 
 export default {
 
