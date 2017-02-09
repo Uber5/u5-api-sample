@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/Uber5/u5-api-sample#readme",
   "dependencies": {
+    "cors": "2.8.1",
     "u5-api-base": "0.0.4"
   },
   "devDependencies": {

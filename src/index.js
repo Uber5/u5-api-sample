@@ -3,7 +3,7 @@ import express from 'express'
 import { makeExecutableSchema, addResolveFunctionsToSchema } from 'graphql-tools'
 import { log, types, configureEndpoint, getLiteralTypes, getResolvers } from 'u5-api-base'
 import { mongo, ensureIndexes } from './db'
-
+import cors from 'cors'
 const app = express()
 
 const queries = `
@@ -67,7 +67,19 @@ addResolveFunctionsToSchema(schema, {
 const endpoint = configureEndpoint({
   schema
 })
-app.use('/api', endpoint);
+
+console.log('schema', schema)
+
+app.use('/api',
+  cors({
+    origin: (origin, cb) => {
+      return cb(null, true) // always allow, compare http://stackoverflow.com/questions/29531521/req-headers-origin-is-undefined
+    },
+    credentials: true,
+    allowedHeaders: [ 'Content-Type', 'Authorization' ]
+  }),
+  endpoint
+);
 
 // listen as a server
 const port = process.env.PORT || 4000
